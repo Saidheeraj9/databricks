@@ -1,0 +1,15 @@
+select cleaned_sales_data.cleaned_sales_date, cleaned_sales_data.cleaned_sales_id, cleaned_sales_data.model, integrated_data.cleaned_sales_id, integrated_data.integrated_id
+FROM cleaned_sales_data
+RIGHT JOIN integrated_data ON cleaned_sales_data.cleaned_sales_date=integrated_data.cleaned_sales_id;
+
+select cleaned_sales_data.cleaned_sales_date, cleaned_sales_data.cleaned_sales_id, cleaned_sales_data.model, integrated_data.cleaned_sales_id, integrated_data.integrated_id
+FROM cleaned_sales_data
+LEFT JOIN integrated_data ON cleaned_sales_data.cleaned_sales_date=integrated_data.cleaned_sales_id;
+
+select cleaned_sales_data.cleaned_sales_date, cleaned_sales_data.cleaned_sales_id, cleaned_sales_data.model, integrated_data.cleaned_sales_id, integrated_data.integrated_id
+FROM cleaned_sales_data
+INNER JOIN integrated_data ON cleaned_sales_data.cleaned_sales_date=integrated_data.cleaned_sales_id;
+
+select cleaned_sales_data.cleaned_sales_date, cleaned_sales_data.cleaned_sales_id, cleaned_sales_data.model, integrated_data.cleaned_sales_id, integrated_data.integrated_id
+FROM cleaned_sales_data
+FULL JOIN integrated_data ON cleaned_sales_data.cleaned_sales_date=integrated_data.cleaned_sales_id;
